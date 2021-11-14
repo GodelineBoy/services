@@ -1,4 +1,4 @@
-<section *ngFor="let cocktail of cocktails">
+<section *ngFor="let cocktail of cocktails | async">
     <p>Nom du cocktail : {{cocktail?.name}}</p>
     <p>Price : {{cocktail?.price}}</p>
     <img src="{{cocktail?.img}}" alt="photo de cocktails"/>
