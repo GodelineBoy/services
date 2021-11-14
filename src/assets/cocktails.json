@@ -1,0 +1,22 @@
+
+{"cocktails": 
+    [ 
+    {
+        "name": "mojito", 
+        "price": 11, 
+        "img":"assets/aperol-spritz-prosecco-aperol-tranche-orange-vue-laterale_141793-4345.jpg"
+    },
+    
+    {
+        "name": "spritz", 
+        "price": 13, 
+        "img":"assets/aperol-spritz-prosecco-aperol-tranche-orange-vue-laterale_141793-4345.jpg"
+    },
+    
+    {
+        "name": "malibu", 
+        "price": 10, 
+        "img":"assets/cocktail-fraise-orange-glace-pilee-garnie-orange-sechee_140725-590.jpg"
+    }
+]
+}
