@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import {Injectable} from "@angular/core";
+import { Observable } from "rxjs";
 import { Cocktails } from "./common/cocktails.model";
 
 @Injectable({
@@ -13,7 +14,7 @@ export class CocktailService {
     constructor(private http: HttpClient){}
 
 
-    getCocktails(){
+    public getCocktails(): Observable<Cocktails[]>{
         return this.http.get<Cocktails[]>('assets/cocktails.json')
     }
 }

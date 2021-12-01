@@ -11,11 +11,20 @@ import { Observable } from 'rxjs';
 
 export class CocktailListComponent implements OnInit {
 
-  public cocktails: Observable<Cocktails[]>
+  public cocktails: Cocktails[]
 
   constructor(public cocktailService: CocktailService){
-    this.cocktails = this.cocktailService.getCocktails();
+    this.cocktails = [] 
   }
+  ngOnInit() {
+    this.cocktailService.getCocktails().subscribe((cocktailsList) => {
+      cocktailsList.forEach((cocktails: Cocktails) => {
+        this.cocktails.push(new Cocktails(cocktails.name, cocktails.price, cocktails.img))
+      })
+    })
+  }
+  }
+  
 
-  ngOnInit(): void{}
-}
+
+
